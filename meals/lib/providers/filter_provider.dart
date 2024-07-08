@@ -24,6 +24,7 @@ class FilterProvider extends StateNotifier<Map<Filter, bool>> {
 final filterProvider = StateNotifierProvider<FilterProvider, Map<Filter, bool>>(
   (ref) => FilterProvider(),
 );
+
 final filterMealsProvider = Provider((ref) {
   final meals = ref.watch(mealsProvider);
   final activeFilter = ref.watch(filterProvider);
